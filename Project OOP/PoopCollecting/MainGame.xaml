@@ -1,0 +1,61 @@
+﻿<Window x:Class="PoopCollecting.MainGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoopCollecting"
+        mc:Ignorable="d"
+        Title="MainGame" 
+        WindowStyle="None"
+        Width="700" Height="600"
+        >
+
+    <Grid>
+        <Canvas 
+                Focusable="True"
+                KeyUp="Canvas_KeyUp"
+                KeyDown="Canvas_KeyDown"
+                Name="myCanvas"
+                Background="Gray" Grid.RowSpan="3">
+
+            <Image Source="C:\Users\tudan\Desktop\Project OOP\PoopCollecting\Image\kisspng-barbecue-chicken-buffalo-wing-cartoon-clip-art-animated-chicken-5aa9e430f11f74.5454499215210834409877.jpg"
+               Name="Chicken"
+               Height="110"
+               Width="120"
+               Opacity="0"
+               Grid.Column="0" Canvas.Left="290" Canvas.Top="-12"/>
+            <Image Source="C:\Users\tudan\Desktop\Project OOP\PoopCollecting\Image\kisspng-barbecue-chicken-buffalo-wing-cartoon-clip-art-animated-chicken-5aa9e430f11f74.5454499215210834409877.jpg"
+               Name="Player"
+               Height="110"
+               Width="120"
+               Opacity="0"
+               Grid.Row="2" Canvas.Left="290" Canvas.Top="466" />
+            <Button Name="PlayButton"
+                Content="Play"
+                Height="70"
+                Width="150" Margin="325,76,325,76" Grid.Row="1"
+                Click="PlayButton_Click" Canvas.Top="187" Canvas.Left="-55"/>
+            <Label Canvas.Left="75" Canvas.Top="115" Width="244" Height="67" FontSize="30" Name="labelEnter" Opacity="0">
+                Enter your Name:
+            </Label>
+            <TextBox Height="50" 
+                     Canvas.Left="324" 
+                     Canvas.Top="115" 
+                     FontSize="30"
+                     TextWrapping="Wrap" 
+                     Width="318"
+                     Name="Entry"
+                     Opacity="0"/>
+            
+            <Button Name="Gobutton"
+                    Content="Enter"
+                    FontSize="30"
+                    Height="70"
+                    Width="150"
+                    Click="Gobutton_Click" Canvas.Left="492" Canvas.Top="286"
+                    Opacity="0"/>
+            <TextBlock Name="Score" Text="Score: " FontSize="35"/>
+            
+        </Canvas>
+    </Grid>
+</Window>
